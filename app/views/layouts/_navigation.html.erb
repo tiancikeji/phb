@@ -1,32 +1,30 @@
-<%= link_to "Phb", root_path, :class => 'brand' %>
-<ul class="nav">
-  <% if user_signed_in? %>
-    <li>
-      <a href="/categories">categories</a>
-    </li>
-    <li>
-      <a href="/articles">articles</a>
-    </li>
-    <li>
-      <a href="/comments">comments</a>
-    </li>
-    <li>
-    <%= link_to current_user.email, edit_user_registration_path %>
-    </li>
-    <li>
-    <%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %>
-    </li>
-    <% if current_user.has_role? :admin %>
-      <li>
-      <%= link_to 'Admin', users_path %>
+<% if user_signed_in? %>
+  <div class="btn-toolbar pull-right">
+  <div class="btn-group">
+    <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+      <i class="icon-user-1"></i> <%= current_user.email %>
+      <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu megamenu col2 ud">
+      <li class="sub">
+      <div class="img_round img_c_margin">
+      </div>
       </li>
-    <% end %>
-  <% else %>
-    <li>
-    <%= link_to 'Login', new_user_session_path %>
-    </li>
-    <li>
-    <%= link_to 'Sign up', new_user_registration_path %>
-    </li>
-  <% end %>
-</ul>
+      <li class="sub">
+      <ul>
+        <li><a href="#"><i class="icon-large icon-cog-2"></i> Profile</a></li>
+        <li><a href="#"><i class="icon-large icon-key"></i> Privacy Settings</a></li>
+        <% if current_user.has_role? :admin %><li><%= link_to 'Admin', users_path %></li><% end %>
+        <li class="divider"></li>
+        <li><%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %></li>
+      </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+<% else %>
+  <%= link_to 'Login', new_user_session_path %>
+  <%= link_to 'Sign up', new_user_registration_path %>
+<% end %>
+
+

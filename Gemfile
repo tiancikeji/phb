@@ -8,6 +8,7 @@ group :assets do
 end
 gem 'jquery-rails'
 gem "rspec-rails", ">= 2.11.0", :group => [:development, :test]
+gem "quiet_assets", :group => [:development]
 gem "capybara", ">= 1.1.2", :group => :test
 gem "email_spec", ">= 1.2.1", :group => :test
 gem "cucumber-rails", ">= 1.3.0", :group => :test, :require => false
@@ -20,3 +21,4 @@ gem "devise", ">= 2.1.2"
 gem "cancan", ">= 1.6.8"
 gem "rolify", ">= 3.2.0"
 gem "ckeditor"
+gem "thin"

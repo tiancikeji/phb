@@ -1,35 +1,77 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Phb" %></title>
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Phb" %>">
-    <%= stylesheet_link_tag "application", :media => "all" %>
-    <%= javascript_include_tag "application" %>
-    <%= csrf_meta_tags %>
-    <%= yield(:head) %>
-  </head>
-  <body>
-    <div class="navbar navbar-fixed-top">
-      <nav class="navbar-inner">
-        <div class="container">
-          <%= render 'layouts/navigation' %>
-        </div>
-      </nav>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CMS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- CSS -->
+  <%= csrf_meta_tags %>
+  <link href="assets/css/bootstrap.css" rel="stylesheet" />
+  <link href="css/combine_fonts.css" rel="stylesheet" />
+  <link href="plugins/datepicker/css/datepicker.css" rel="stylesheet" />
+  <link href="plugins/colorpicker/css/colorpicker.css" rel="stylesheet" />
+  <link href="plugins/wysiwyg/bootstrap-wysihtml5.css" rel="stylesheet" />
+  <link href="plugins/plupload/js/jquery.plupload.queue/css/jquery.plupload.queue.css" rel="stylesheet" />
+
+  <link href="css/buttons.css" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+
+  <!-- color style -->
+  <link href="css/dark.css" rel="stylesheet" />
+  <link href="css/cms.css" rel="stylesheet" />
+  <link href="assets/css/bootstrap-responsive.css" rel="stylesheet" />
+  <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <!-- bootstrap fav and touch icons, replace with your own -->
+  <link rel="shortcut icon" href="assets/ico/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+  <%= javascript_include_tag "application" %>
+</head>
+
+<body>
+
+<!-- top fixed navbar -->
+<div id="header" class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container-fluid">
+      <a class="brand" href="/">PHB</a>
+      <%= render 'layouts/navigation' %>
     </div>
-    <div id="main" role="main">
-      <div class="container">
-        <div class="content">
-           <div class="row">
-            <div class="span12">
-              <%= render 'layouts/messages' %>
-              <%= yield %>
-            </div>
-          </div>
-          <footer>
-          </footer>
-        </div>
-      </div> <!--! end of .container -->
-    </div> <!--! end of #main -->
-  </body>
+  </div>
+</div><!-- top fixed navbar -->
+
+<div class="container-fluid">
+  <div class="row-fluid">
+    <%= render 'layouts/sidebar' %>
+    <!-- main content -->
+    <div id="main_content" class="span10">
+      <%= render 'layouts/messages' %>
+      <%= yield  %>
+    </div><!-- main content -->
+  </div>
+</div>
+
+<!-- JS Files
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="plugins/wysiwyg/wysihtml5-0.3.0_rc3.min.js"></script>
+<script src="assets/js/bootstrap.js"></script>	
+
+<script src="plugins/datepicker/js/bootstrap-datepicker.js"></script>
+<script src="plugins/colorpicker/js/bootstrap-colorpicker.js"></script>
+<script src="plugins/wysiwyg/bootstrap-wysihtml5.js"></script>
+
+<script type="text/javascript" src="http://bp.yahooapis.com/2.4.21/browserplus-min.js"></script>
+<script type="text/javascript" src="plugins/plupload/js/plupload.full.js"></script>
+<script type="text/javascript" src="plugins/plupload/js/jquery.plupload.queue/jquery.plupload.queue.js"></script>
+
+</body>
 </html>
