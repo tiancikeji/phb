@@ -1,0 +1,21 @@
+<div class="row-fluid">
+  <div class="widget_container">
+    <div class="well">
+      <%= form_for(@user, :url => '/users/create') do |f| %>
+        <p><%= f.label :name %><br />
+      <%= f.text_field :name %></p>
+
+      <div><%= f.label :email %><br />
+        <%= f.email_field :email %></div>
+
+      <div><%= f.label :password %><br />
+        <%= f.password_field :password %></div>
+
+      <div><%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation %></div>
+
+      <div><%= f.submit "Save" %></div>
+    <% end %>
+    </div>
+  </div>
+</div>

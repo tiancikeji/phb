@@ -11,5 +11,10 @@ Phb::Application.routes.draw do
   devise_for :users, :controllers => {
     :sessions => :sessions
   }
-  resources :users
+  resources :users do
+    member do 
+      post 'create' => 'users#create'
+    end
+  end
+
 end

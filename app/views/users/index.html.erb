@@ -1,8 +1,15 @@
-<h3>Users</h3>
-<ul class="users">
-  <% @users.each do |user| %>
-    <li>
-      <%= link_to user.name, user %> signed up <%= user.created_at.to_date %>
-    </li>
-  <% end %>
-</ul>
+<div class="row-fluid">
+  <div class="widget_container">
+    <div class="well">
+      <h3>Users</h3>
+      <a href="/users/new">New</a>
+      <ul class="users">
+        <% @users.each do |user| %>
+          <li>
+        <%= link_to user.name, user %> signed up <%= user.created_at.to_date %>
+        </li>
+      <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
