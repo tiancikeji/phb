@@ -12,8 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :parent_id %><br />
-    <%= f.number_field :parent_id %>
+    Category: <%= f.select :parent_id ,Category.all.map { |category| [category.name,category.id]}%> 
   </div>
   <div class="field">
     <%= f.label :name %><br />

@@ -1,4 +1,4 @@
-<%= form_for(@article) do |f| %>
+<%= form_for @article,:html => {:multipart => true} do |f| %>
 				<div class="row-fluid">
 					<div class="widget_container">
 						<div class="well">
@@ -11,9 +11,10 @@
 							</div>
               Category: <%= f.select :category_id ,Category.all.map { |category| [category.name,category.id]}%> 
               <%= f.text_field :title , :class=>"input-xxlarge-fluid",:placeholder=>"Title"%>
+              <%= f.text_field :summary , :class=>"input-xxlarge-fluid",:placeholder=>"Summay"%>
+              Cover: <%= f.file_field :cover %>
               <%= f.cktext_area :content, :placeholder=>"Enter text ..." ,:style=>"width: 100%; height: 250px;" %>
               <%= f.submit %>
-							
 						</div>
 					</div>
 				</div>
