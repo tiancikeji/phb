@@ -53,7 +53,7 @@
 											</div>
 										</td>
 										<td><%= article.user.email %></td>
-										<td><a href="#"><span class="label label-info"></span></a></td>
+										<td><a href="#"><span class="label label-info"><%= article.category.name if article.category %></span></a></td>
 										<td><%= article.from %></td>
 										<td><span class="badge badge-info">0</span></td>
 										<td><%= article.created_at %><br /></td>
