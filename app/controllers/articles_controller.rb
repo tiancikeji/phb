@@ -2,7 +2,11 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.page params[:page]
+    if params[:term]
+      @articles = Article.where("title like '%"+params[:term]+"%' ").page params[:page]
+    else
+      @articles = Article.page params[:page]
+    end
 
     respond_to do |format|
       format.html # index.html.erb

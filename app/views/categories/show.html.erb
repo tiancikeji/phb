@@ -1,22 +1,21 @@
-
 <div class="row-fluid">
   <div class="widget_container">
     <div class="well">
-<p id="notice"><%= notice %></p>
+      <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Parent:</b>
-  <%= @category.parent.name %>
-</p>
+      <p>
+      <b>Parent:</b>
+      <%= @category.parent.name if @category.parent %>
+      </p>
 
-<p>
-  <b>Name:</b>
-  <%= @category.name %>
-</p>
+      <p>
+      <b>Name:</b>
+      <%= @category.name %>
+      </p>
 
 
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+      <%= link_to 'Edit', edit_category_path(@category) %> |
+      <%= link_to 'Back', categories_path %>
     </div>
   </div>
 </div>
