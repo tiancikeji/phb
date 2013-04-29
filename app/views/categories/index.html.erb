@@ -50,7 +50,7 @@
               </div>
             </div>
           </td>
-          <td><%= category.parent %></td>
+          <td><%= category.parent.name if category.parent %></td>
           <td><span class="badge badge-warning"><%= category.articles.count %></span></td>
           <td><%= category.created_at %></td>
         </tr>
