@@ -1,4 +1,7 @@
 Phb::Application.routes.draw do
+  resources :locations
+
+
   mount Ckeditor::Engine => '/ckeditor'
 
   resources :categories
