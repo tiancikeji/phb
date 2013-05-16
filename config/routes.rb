@@ -2,11 +2,9 @@ Phb::Application.routes.draw do
   resources :locations
 
   namespace :api do
-    resources :users do
-      collection do
-        post 'signin' => "users#signin"
-        post 'signup' => "users#signup"
-      end
+    devise_scope :user do
+      post 'users/signup' => 'registrations#create'
+      post 'users/signin' => 'sessions#create'
     end
   end
 
