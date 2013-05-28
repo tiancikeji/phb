@@ -74,8 +74,7 @@ url: <a href="/api/articles">/api/articles</a>
 </p>
 <code>
 curl -XGET http://localhost:3000/api/articles<br>
-
-[{"category_id":null,"content":"<p>\r\n\tddddd</p>\r\n","cover":{"url":null},"created_at":"2013-04-20T01:05:05Z","from":null,"id":1,"summary":null,"title":"dddd","updated_at":"2013-04-20T01:05:05Z","user_id":1},{"category_id":null,"content":"<p>\r\n\tdddd</p>\r\n","cover":{"url":null},"created_at":"2013-04-21T15:14:27Z","from":null,"id":2,"summary":null,"title":"dddd","updated_at":"2013-04-21T15:14:27Z","user_id":1},{"category_id":null,"content":"<p>\r\n\tddd</p>\r\n","cover":{"url":null},"created_at":"2013-04-21T15:29:06Z","from":null,"id":3,"summary":null,"title":"dd","updated_at":"2013-04-21T15:29:06Z","user_id":1},{"category_id":null,"content":"<p>\r\n\tddd</p>\r\n","cover":{"url":null},"created_at":"2013-04-21T15:40:09Z","from":null,"id":4,"summary":null,"title":"ddd","updated_at":"2013-04-21T15:40:09Z","user_id":1},{"category_id":null,"content":"<p>\r\n\t<img alt=\"\" src=\"/system/ckeditor_assets/pictures/1/content_logo.png\" style=\"width: 240px; height: 32px;\" /></p>\r\n<p>\r\n\tsssss</p>\r\n","cover":{"url":null},"created_at":"2013-04-22T23:31:00Z","from":null,"id":5,"summary":null,"title":"sss","updated_at":"2013-04-22T23:31:00Z","user_id":1},{"category_id":1,"content":"<p>\r\n\tddd</p>\r\n","cover":{"url":null},"created_at":"2013-04-22T23:56:32Z","from":null,"id":6,"summary":null,"title":"dddd","updated_at":"2013-04-22T23:56:32Z","user_id":1},{"category_id":1,"content":"<p>\r\n\tfdsafsa</p>\r\n","cover":{"url":"/uploads/article/cover/7/logo.png"},"created_at":"2013-04-24T03:39:43Z","from":null,"id":7,"summary":"fdsafs","title":"dsffds","updated_at":"2013-04-24T03:39:43Z","user_id":1},{"category_id":1,"content":"<p>\r\n\tdddd</p>\r\n","cover":{"url":"/uploads/article/cover/8/logo.png"},"created_at":"2013-04-29T02:27:52Z","from":"ddd","id":8,"summary":"ddd","title":"ddd","updated_at":"2013-04-29T02:27:52Z","user_id":1}]
+[{"category_id":2,"content":"<p>\r\n\t<span style=\"color: rgb(0, 0, 0); font-family: 宋体, Arial, sans-serif; font-size: 16px; line-height: 28px; text-indent: 32px;\">5月30日，红旗旗下首款车型H7将在北京上市，上市地点选择了极具象征意义的北京鸟巢。被内部称为&ldquo;红馆&rdquo;的城市展厅也在加紧建设中，首批红旗城市展厅选址在长春、北京、上海等5大城市，据一汽内部人士透露，北京唯一的一家&ldquo;红馆&rdquo;落户金宝街，将于月底正式开业</span></p>\r\n","cover":{"url":"/uploads/article/cover/9/logo.png"},"created_at":"2013-05-28T15:10:02Z","from":"http://auto.qq.com/a/20130528/002897.htm","id":9,"summary":"红旗城市展厅毗邻劳","title":"红旗城市展厅毗邻劳斯莱斯 新车30日上市","updated_at":"2013-05-28T15:10:02Z","user_id":1}]
 </code>
 <hr/>
 
@@ -92,7 +91,7 @@ url: <a href="/api/articles/1">/api/articles/1</a>
 <code>
 curl -XGET http://localhost:3000/api/articles/1
 
-{"category_id":null,"content":"<p>\r\n\tddddd</p>\r\n","cover":{"url":null},"created_at":"2013-04-20T01:05:05Z","from":null,"id":1,"summary":null,"title":"dddd","updated_at":"2013-04-20T01:05:05Z","user_id":1}
+{"category_id":2,"content":"<p>\r\n\t<span style=\"color: rgb(0, 0, 0); font-family: 宋体, Arial, sans-serif; font-size: 16px; line-height: 28px; text-indent: 32px;\">5月30日，红旗旗下首款车型H7将在北京上市，上市地点选择了极具象征意义的北京鸟巢。被内部称为&ldquo;红馆&rdquo;的城市展厅也在加紧建设中，首批红旗城市展厅选址在长春、北京、上海等5大城市，据一汽内部人士透露，北京唯一的一家&ldquo;红馆&rdquo;落户金宝街，将于月底正式开业</span></p>\r\n","cover":{"url":"/uploads/article/cover/9/logo.png"},"created_at":"2013-05-28T15:10:02Z","from":"http://auto.qq.com/a/20130528/002897.htm","id":9,"summary":"红旗城市展厅毗邻劳","title":"红旗城市展厅毗邻劳斯莱斯 新车30日上市","updated_at":"2013-05-28T15:10:02Z","user_id":1}
 </code>
 <hr/>
 
