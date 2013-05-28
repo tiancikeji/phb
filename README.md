@@ -73,7 +73,8 @@ url: <a href="/api/articles">/api/articles</a>
 参数：
 </p>
 <code>
-curl -XGET http://localhost:3000/api/articles
+curl -XGET http://localhost:3000/api/articles<br>
+
 [{"category_id":null,"content":"<p>\r\n\tddddd</p>\r\n","cover":{"url":null},"created_at":"2013-04-20T01:05:05Z","from":null,"id":1,"summary":null,"title":"dddd","updated_at":"2013-04-20T01:05:05Z","user_id":1},{"category_id":null,"content":"<p>\r\n\tdddd</p>\r\n","cover":{"url":null},"created_at":"2013-04-21T15:14:27Z","from":null,"id":2,"summary":null,"title":"dddd","updated_at":"2013-04-21T15:14:27Z","user_id":1},{"category_id":null,"content":"<p>\r\n\tddd</p>\r\n","cover":{"url":null},"created_at":"2013-04-21T15:29:06Z","from":null,"id":3,"summary":null,"title":"dd","updated_at":"2013-04-21T15:29:06Z","user_id":1},{"category_id":null,"content":"<p>\r\n\tddd</p>\r\n","cover":{"url":null},"created_at":"2013-04-21T15:40:09Z","from":null,"id":4,"summary":null,"title":"ddd","updated_at":"2013-04-21T15:40:09Z","user_id":1},{"category_id":null,"content":"<p>\r\n\t<img alt=\"\" src=\"/system/ckeditor_assets/pictures/1/content_logo.png\" style=\"width: 240px; height: 32px;\" /></p>\r\n<p>\r\n\tsssss</p>\r\n","cover":{"url":null},"created_at":"2013-04-22T23:31:00Z","from":null,"id":5,"summary":null,"title":"sss","updated_at":"2013-04-22T23:31:00Z","user_id":1},{"category_id":1,"content":"<p>\r\n\tddd</p>\r\n","cover":{"url":null},"created_at":"2013-04-22T23:56:32Z","from":null,"id":6,"summary":null,"title":"dddd","updated_at":"2013-04-22T23:56:32Z","user_id":1},{"category_id":1,"content":"<p>\r\n\tfdsafsa</p>\r\n","cover":{"url":"/uploads/article/cover/7/logo.png"},"created_at":"2013-04-24T03:39:43Z","from":null,"id":7,"summary":"fdsafs","title":"dsffds","updated_at":"2013-04-24T03:39:43Z","user_id":1},{"category_id":1,"content":"<p>\r\n\tdddd</p>\r\n","cover":{"url":"/uploads/article/cover/8/logo.png"},"created_at":"2013-04-29T02:27:52Z","from":"ddd","id":8,"summary":"ddd","title":"ddd","updated_at":"2013-04-29T02:27:52Z","user_id":1}]
 </code>
 <hr/>
@@ -90,6 +91,7 @@ url: <a href="/api/articles/1">/api/articles/1</a>
 </p>
 <code>
 curl -XGET http://localhost:3000/api/articles/1
+
 {"category_id":null,"content":"<p>\r\n\tddddd</p>\r\n","cover":{"url":null},"created_at":"2013-04-20T01:05:05Z","from":null,"id":1,"summary":null,"title":"dddd","updated_at":"2013-04-20T01:05:05Z","user_id":1}
 </code>
 <hr/>
