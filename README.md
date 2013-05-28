@@ -91,7 +91,17 @@ url: <a href="/api/articles/1">/api/articles/1</a>
 <code>
 curl -XGET http://localhost:3000/api/articles/1
 
-{"category_id":2,"content":"<p>\r\n\t<span style=\"color: rgb(0, 0, 0); font-family: 宋体, Arial, sans-serif; font-size: 16px; line-height: 28px; text-indent: 32px;\">5月30日，红旗旗下首款车型H7将在北京上市，上市地点选择了极具象征意义的北京鸟巢。被内部称为&ldquo;红馆&rdquo;的城市展厅也在加紧建设中，首批红旗城市展厅选址在长春、北京、上海等5大城市，据一汽内部人士透露，北京唯一的一家&ldquo;红馆&rdquo;落户金宝街，将于月底正式开业</span></p>\r\n","cover":{"url":"/uploads/article/cover/9/logo.png"},"created_at":"2013-05-28T15:10:02Z","from":"http://auto.qq.com/a/20130528/002897.htm","id":9,"summary":"红旗城市展厅毗邻劳","title":"红旗城市展厅毗邻劳斯莱斯 新车30日上市","updated_at":"2013-05-28T15:10:02Z","user_id":1}
+{ "category_id" : 2,
+  "content" : "<p>\r\n\t<span style=\"color: rgb(0, 0, 0); font-family: 宋体, Arial, sans-serif; font-size: 16px; line-height: 28px; text-indent: 32px;\">5月30日，红旗旗下首款车型H7将在北京上市，上市地点选择了极具象征意义的北京鸟巢。被内部称为“红馆”的城市展厅也在加紧建设中，首批红旗城市展厅选址在长春、北京、上海等5大城市，据一汽内部人士透露，北京唯一的一家“红馆”落户金宝街，将于月底正式开业</span></p>\r\n",
+  "cover" : { "url" : "/uploads/article/cover/9/logo.png" },
+  "created_at" : "2013-05-28T15:10:02Z",
+  "from" : "http://auto.qq.com/a/20130528/002897.htm",
+  "id" : 9,
+  "summary" : "红旗城市展厅毗邻劳",
+  "title" : "红旗城市展厅毗邻劳斯莱斯 新车30日上市",
+  "updated_at" : "2013-05-28T15:10:02Z",
+  "user_id" : 1
+}
 </code>
 <hr/>
 
