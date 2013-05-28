@@ -6,6 +6,10 @@ Phb::Application.routes.draw do
       post 'users/signup' => 'registrations#create'
       post 'users/signin' => 'sessions#create'
     end
+    resources :categories
+    resources :comments
+    resources :articles
+    resources :locations
   end
 
   mount Ckeditor::Engine => '/ckeditor'
