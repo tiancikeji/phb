@@ -134,7 +134,6 @@ url: <a href="">/</a>
 <hr/>
 
 <h2>
-搜索 
 </h2>
 <h3>
 url: <a href="">/</a>
@@ -174,16 +173,35 @@ url: <a href="">/</a>
 </code>
 <hr/>
 
-
 <h2>
-评论
+评论list
 </h2>
 <h3>
-url: <a href="">/</a>
+url: <a href="/api/comments">/api/comments</a>
 </h3>
 <p>
 参数：
 </p>
 <code>
+curl -XGET http://localhost:3000/api/comments
+
+[{"article_id":9,"content":"dddd","created_at":"2013-05-28T15:28:56Z","id":3,"title":"this is a title","updated_at":"2013-05-28T15:28:56Z","user_id":1}]
+</code>
+<hr/>
+
+<h2>
+add评论
+</h2>
+<p>
+参数：
+comment[article_id]
+comment[content]
+comment[title]
+comment[user_id]
+</p>
+<code>
+curl -XPOST -d'comment[article_id]=9&comment[content]=dddd&comment[title]=this is a title&comment[user_id]=1' http://localhost:3000/api/comments
+
+{"article_id":9,"content":"dddd","created_at":"2013-05-28T15:28:56Z","id":3,"title":"this is a title","updated_at":"2013-05-28T15:28:56Z","user_id":1}
 </code>
 <hr/>

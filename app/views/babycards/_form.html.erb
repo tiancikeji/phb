@@ -1,0 +1,53 @@
+<%= form_for(@babycard) do |f| %>
+  <% if @babycard.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@babycard.errors.count, "error") %> prohibited this babycard from being saved:</h2>
+
+      <ul>
+      <% @babycard.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %><br />
+    <%= f.number_field :gender %>
+  </div>
+  <div class="field">
+    <%= f.label :birthday %><br />
+    <%= f.text_field :birthday %>
+  </div>
+  <div class="field">
+    <%= f.label :blood_type %><br />
+    <%= f.text_field :blood_type %>
+  </div>
+  <div class="field">
+    <%= f.label :father_phone %><br />
+    <%= f.text_field :father_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :mather_phone %><br />
+    <%= f.text_field :mather_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :record %><br />
+    <%= f.text_field :record %>
+  </div>
+  <div class="field">
+    <%= f.label :note %><br />
+    <%= f.text_area :note %>
+  </div>
+  <div class="field">
+    <%= f.label :color %><br />
+    <%= f.text_field :color %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

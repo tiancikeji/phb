@@ -1,40 +1,44 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @location.name %>
-</p>
+<div class="widget_container">
+  <div class="well">
+    <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Lat:</b>
-  <%= @location.lat %>
-</p>
+    <p>
+    <b>Name:</b>
+    <%= @location.name %>
+    </p>
 
-<p>
-  <b>Lng:</b>
-  <%= @location.lng %>
-</p>
+    <p>
+    <b>Lat:</b>
+    <%= @location.lat %>
+    </p>
 
-<p>
-  <b>Phone:</b>
-  <%= @location.phone %>
-</p>
+    <p>
+    <b>Lng:</b>
+    <%= @location.lng %>
+    </p>
 
-<p>
-  <b>Address:</b>
-  <%= @location.address %>
-</p>
+    <p>
+    <b>Phone:</b>
+    <%= @location.phone %>
+    </p>
 
-<p>
-  <b>User comment:</b>
-  <%= @location.user_comment %>
-</p>
+    <p>
+    <b>Address:</b>
+    <%= @location.address %>
+    </p>
 
-<p>
-  <b>Description:</b>
-  <%= @location.description %>
-</p>
+    <p>
+    <b>User comment:</b>
+    <%= @location.user_comment %>
+    </p>
 
+    <p>
+    <b>Description:</b>
+    <%= @location.description %>
+    </p>
 
-<%= link_to 'Edit', edit_location_path(@location) %> |
-<%= link_to 'Back', locations_path %>
+    <%= link_to 'Edit', edit_location_path(@location) %> |
+    <%= link_to 'Back', locations_path %>
+  </div>
+</div>

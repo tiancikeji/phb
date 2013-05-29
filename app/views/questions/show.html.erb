@@ -1,0 +1,30 @@
+
+<div class="widget_container">
+  <div class="well">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @question.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @question.description %>
+</p>
+
+<p>
+  <b>Score:</b>
+  <%= @question.score %>
+</p>
+
+<p>
+  <b>Sort:</b>
+  <%= @question.sort %>
+</p>
+
+
+<%= link_to 'Edit', edit_question_path(@question) %> |
+<%= link_to 'Back', questions_path %>
+</div>
+</div>

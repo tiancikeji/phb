@@ -1,0 +1,43 @@
+<div class="widget_container">
+  <div class="well">
+    <h1>Listing babycards</h1>
+
+    <table class="table">
+      <tr>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Birthday</th>
+        <th>Blood type</th>
+        <th>Father phone</th>
+        <th>Mather phone</th>
+        <th>Record</th>
+        <th>Note</th>
+        <th>Color</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+
+      <% @babycards.each do |babycard| %>
+        <tr>
+        <td><%= babycard.name %></td>
+        <td><%= babycard.gender %></td>
+        <td><%= babycard.birthday %></td>
+        <td><%= babycard.blood_type %></td>
+        <td><%= babycard.father_phone %></td>
+        <td><%= babycard.mather_phone %></td>
+        <td><%= babycard.record %></td>
+        <td><%= babycard.note %></td>
+        <td><%= babycard.color %></td>
+        <td><%= link_to 'Show', babycard %></td>
+        <td><%= link_to 'Edit', edit_babycard_path(babycard) %></td>
+        <td><%= link_to 'Destroy', babycard, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+    </table>
+
+    <br />
+
+    <%= link_to 'New Babycard', new_babycard_path %>
+  </div>
+</div>

@@ -11,7 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130505064802) do
+ActiveRecord::Schema.define(:version => 20130529031606) do
+
+  create_table "add_user_id_to_baby_cards", :force => true do |t|
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -23,6 +29,20 @@ ActiveRecord::Schema.define(:version => 20130505064802) do
     t.string   "summary"
     t.string   "cover"
     t.string   "from"
+  end
+
+  create_table "babycards", :force => true do |t|
+    t.string   "name"
+    t.integer  "gender"
+    t.string   "birthday"
+    t.string   "blood_type"
+    t.string   "father_phone"
+    t.string   "mather_phone"
+    t.string   "record"
+    t.text     "note"
+    t.string   "color"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "categories", :force => true do |t|
@@ -54,6 +74,7 @@ ActiveRecord::Schema.define(:version => 20130505064802) do
     t.integer  "article_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "user_id"
   end
 
   create_table "locations", :force => true do |t|
@@ -66,6 +87,15 @@ ActiveRecord::Schema.define(:version => 20130505064802) do
     t.text     "description"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+  end
+
+  create_table "questions", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "score"
+    t.integer  "sort"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "roles", :force => true do |t|

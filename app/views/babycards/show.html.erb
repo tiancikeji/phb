@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @babycard.name %>
+</p>
+
+<p>
+  <b>Gender:</b>
+  <%= @babycard.gender %>
+</p>
+
+<p>
+  <b>Birthday:</b>
+  <%= @babycard.birthday %>
+</p>
+
+<p>
+  <b>Blood type:</b>
+  <%= @babycard.blood_type %>
+</p>
+
+<p>
+  <b>Father phone:</b>
+  <%= @babycard.father_phone %>
+</p>
+
+<p>
+  <b>Mather phone:</b>
+  <%= @babycard.mather_phone %>
+</p>
+
+<p>
+  <b>Record:</b>
+  <%= @babycard.record %>
+</p>
+
+<p>
+  <b>Note:</b>
+  <%= @babycard.note %>
+</p>
+
+<p>
+  <b>Color:</b>
+  <%= @babycard.color %>
+</p>
+
+
+<%= link_to 'Edit', edit_babycard_path(@babycard) %> |
+<%= link_to 'Back', babycards_path %>

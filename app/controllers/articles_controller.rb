@@ -4,6 +4,8 @@ class ArticlesController < ApplicationController
   def index
     if params[:term]
       @articles = Article.where("title like '%"+params[:term]+"%' ").page params[:page]
+    elsif params[:tag]
+      @articles = Article.tagged_with(params[:tag]).page params[:page]
     else
       @articles = Article.page params[:page]
     end
