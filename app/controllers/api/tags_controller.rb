@@ -4,13 +4,7 @@ class Api::TagsController < ApplicationController
     articles = Article.tagged_with(params[:id]).page params[:page]
     locations = Location.tagged_with(params[:id])
     categories = {}
-    articles.each do |article|
-      # if categories.has_key? article.category.id
-        article_array = []
-        article_array.append(article) 
-        categories.store(article.category.name,article_array)
-      # end
-    end
+    categories.store(articles.first.category.name,articles)
     render :json => {:success=>true,:tag => params[:id],:categories => categories,:locations => locations}
   end
 
