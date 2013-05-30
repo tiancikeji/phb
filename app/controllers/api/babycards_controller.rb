@@ -14,7 +14,7 @@ class Api::BabycardsController < ApplicationController
   def create
     @babycard = Babycard.new(params[:babycard])
       if @babycard.save
-        render json: @babycard, status: :created, location: @babycard 
+        render :json => {success=>true,:babycard =>  @babycard}
       else
         render json: @babycard.errors, status: :unprocessable_entity 
       end
