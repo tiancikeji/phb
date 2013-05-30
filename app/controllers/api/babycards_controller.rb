@@ -3,7 +3,7 @@ class Api::BabycardsController < ApplicationController
   # GET /babycards.json
   def index
     @babycards = Babycard.all
-    render json: @babycards
+    render :json => {:babycards => @babycards}
   end
 
   def show
