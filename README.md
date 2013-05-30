@@ -123,13 +123,12 @@ url: <a href="">/</a>
 <h2>
 首页内容
 </h2>
-<h3>
-url: <a href="">/</a>
-</h3>
 <p>
 参数：
 </p>
 <code>
+curl -XGET http://localhost:3001/api/tags/index
+{"tag":"index","articles":[],"locations":[]}
 </code>
 <hr/>
 
@@ -147,15 +146,29 @@ url: <a href="">/</a>
 
 
 <h2>
-安全卡
+安全卡list
 </h2>
-<h3>
-url: <a href="">/</a>
-</h3>
+<p>
+参数：
+user_id
+</p>
+<code>
+curl -XGET -d'user_id=1' http://localhost:3001/api/babycards
+
+[{"birthday":null,"blood_type":null,"color":null,"created_at":"2013-05-30T02:04:49Z","father_phone":null,"gender":null,"id":1,"mather_phone":null,"name":"dd","note":null,"record":null,"updated_at":"2013-05-30T02:04:49Z","user_id":1}]
+</code>
+<hr/>
+
+<h2>
+add安全卡
+</h2>
 <p>
 参数：
 </p>
 <code>
+curl -XPOST -d'babycard[user_id]=1&babycard[name]=dd' http://localhost:3001/api/babycards
+
+{"birthday":null,"blood_type":null,"color":null,"created_at":"2013-05-30T02:04:49Z","father_phone":null,"gender":null,"id":1,"mather_phone":null,"name":"dd","note":null,"record":null,"updated_at":"2013-05-30T02:04:49Z","user_id":1}
 </code>
 <hr/>
 
