@@ -62,6 +62,22 @@ url: <a href="">/</a>
 </code>
 <hr/>
 
+<h2>
+add新闻
+</h2>
+<h3>
+url: <a href="/api/articles">/api/articles</a>
+</h3>
+<p>
+参数：
+</p>
+<code>
+curl -XPOST -d'article[user_id]=1' http://localhost:3000/api/articles
+
+{"success":true,"article":{"category_id":null,"content":null,"cover":{"url":null},"created_at":"2013-06-01T16:27:59Z","from":null,"id":2,"summary":null,"title":null,"updated_at":"2013-06-01T16:27:59Z","user_id":1}}
+</code>
+<hr/>
+
 
 <h2>
 新闻列表

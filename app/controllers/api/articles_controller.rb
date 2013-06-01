@@ -7,7 +7,7 @@ class Api::ArticlesController < ApplicationController
     else
       @articles = Article.page params[:page]
     end
-    render json: @articles
+    render :json => {:success=>true,:articles => @articles}
   end
 
   # GET /articles/1
@@ -37,16 +37,14 @@ class Api::ArticlesController < ApplicationController
   # POST /articles.json
   def create
     @article = Article.new(params[:article])
-    @article.user_id = current_user.id
-    respond_to do |format|
-      if @article.save
-        format.html { redirect_to @article, notice: 'Article was successfully created.' }
-        format.json { render json: @article, status: :created, location: @article }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @article.errors, status: :unprocessable_entity }
-      end
+    if current_user
+      @article.user_id = current_user.id
     end
+      if @article.save
+        render :json => {:success=>true,:article => @article}
+      else
+        render json: @article.errors, status: :unprocessable_entity
+      end
   end
 
   # PUT /articles/1
