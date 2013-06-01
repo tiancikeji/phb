@@ -190,6 +190,20 @@ curl -XPOST -d'babycard[user_id]=1&babycard[name]=dd' http://localhost:3001/api/
 
 
 <h2>
+update安全卡
+</h2>
+<p>
+参数：
+</p>
+<code>
+
+curl -XPUT -d'babycard[name]=dd' http://localhost:3000/api/babycards/1
+
+{"success":true,"babycard":{"birthday":null,"blood_type":null,"color":null,"created_at":"2013-05-30T02:04:49Z","father_phone":null,"gender":null,"id":1,"mather_phone":null,"name":"dd","note":null,"record":null,"updated_at":"2013-05-30T02:04:49Z","user_id":1}}
+</code>
+<hr/>
+
+<h2>
 忘记密码
 </h2>
 <h3>

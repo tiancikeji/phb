@@ -13,20 +13,20 @@ class Api::BabycardsController < ApplicationController
 
   def create
     @babycard = Babycard.new(params[:babycard])
-      if @babycard.save
-        render :json => {success=>true,:babycard =>  @babycard}
-      else
-        render json: @babycard.errors, status: :unprocessable_entity 
-      end
+    if @babycard.save
+      render :json => {:success=>true,:babycard =>  @babycard}
+    else
+      render json: @babycard.errors, status: :unprocessable_entity 
+    end
   end
 
   def update
     @babycard = Babycard.find(params[:id])
-      if @babycard.update_attributes(params[:babycard])
-        render json: @babycard
-      else
-        render json: @babycard.errors, status: :unprocessable_entity
-      end
+    if @babycard.update_attributes(params[:babycard])
+      render :json => {:success=>true,:babycard =>  @babycard}
+    else
+      render :json => {:success=>false,:babycard =>  @babycard, :errors => @babycard.errors,}
+    end
   end
 
   def destroy
