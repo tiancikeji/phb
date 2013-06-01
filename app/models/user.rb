@@ -11,5 +11,6 @@ class User < ActiveRecord::Base
   has_many :articles  
   has_many :comments
   has_many :babycards
+  has_many :feedbacks
 
 end

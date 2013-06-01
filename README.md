@@ -37,6 +37,33 @@ curl -XPOST -d'user[email]=gvissul1@gmail.com&user[password]=woaixuexi' http://l
 <hr/>
 
 <h2>
+update user
+</h2>
+<p>
+参数：
+</p>
+<code>
+curl -XPUT -d'user[name]=wanglei&nickname=vissul&gender=0' http://localhost:3000/api/users/1
+
+{"success":true,"user":{"avatar":null,"created_at":"2013-05-30T01:57:16Z","email":"user@example.com","gender":null,"id":1,"name":"wanglei","nickname":null,"updated_at":"2013-06-01T16:44:21Z"}}
+</code>
+<hr/>
+
+
+<h2>
+告诉编辑
+</h2>
+<p>
+参数：
+</p>
+<code>
+curl -XPOST -d'feedback[user_id]=1&feedback[title]=wtf&feedback[content]=wtf' http://localhost:3000/api/feedbacks
+
+{"success":true,"feedback":{"content":"wtf","created_at":"2013-06-01T16:53:14Z","id":2,"title":"wtf","updated_at":"2013-06-01T16:53:14Z","user_id":1}}
+</code>
+<hr/>
+
+<h2>
 微博登陆
 </h2>
 <h3>

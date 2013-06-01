@@ -1,11 +1,8 @@
 Phb::Application.routes.draw do
-  resources :add_user_id_to_baby_cards
-
-
+  resources :feedbacks
   resources :babycards
   resources :questions
   resources :locations
-  # get 'tags/:tag', to: 'articles#index', as: :tag
   resources :tags
 
   namespace :api do
@@ -13,6 +10,7 @@ Phb::Application.routes.draw do
       post 'users/signup' => 'registrations#create'
       post 'users/signin' => 'sessions#create'
     end
+    resources  :users
     resources :tags
     resources :categories
     resources :comments
@@ -20,6 +18,7 @@ Phb::Application.routes.draw do
     resources :locations
     resources :babycards
     resources :questions
+    resources :feedbacks
   end
 
   mount Ckeditor::Engine => '/ckeditor'

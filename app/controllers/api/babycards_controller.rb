@@ -25,7 +25,7 @@ class Api::BabycardsController < ApplicationController
     if @babycard.update_attributes(params[:babycard])
       render :json => {:success=>true,:babycard =>  @babycard}
     else
-      render :json => {:success=>false,:babycard =>  @babycard, :errors => @babycard.errors,}
+      render :json => {:success=>false,:babycard =>  @babycard, :errors => @babycard.errors}
     end
   end
 
