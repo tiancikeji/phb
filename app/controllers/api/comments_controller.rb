@@ -2,8 +2,8 @@ class Api::CommentsController < ApplicationController
   # GET /comments
   # GET /comments.json
   def index
-    @comments = Comment.all
-    render json: @comments
+    @comments = Comment.where(:user_id => params[:user_id])
+    render :json => {:success => true , :comments => @comments} 
   end
 
   def show

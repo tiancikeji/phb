@@ -176,17 +176,31 @@ curl -XGET http://localhost:3001/api/tags/index
 <hr/>
 
 <h2>
+添加评论
 </h2>
-<h3>
-url: <a href="">/</a>
-</h3>
 <p>
 参数：
 </p>
 <code>
+curl -XPOST -d'comment[article_id]=1&comment[title]=wtf&comment[content]=wtf&comment[user_id]=1' http://localhost:3000/api/comments
+
+{"success":true,"comment":{"article_id":1,"content":"wtf","created_at":"2013-06-01T17:04:47Z","id":1,"title":"wtf","updated_at":"2013-06-01T17:04:47Z","user_id":1}}
 </code>
 <hr/>
 
+<h2>
+我的评论
+</h2>
+<p>
+参数：
+</p>
+
+<code>
+curl -XGET -d'user_id=1' http://localhost:3000/api/comments
+
+{"success":true,"comments":[{"article_id":1,"content":"wtf","created_at":"2013-06-01T17:04:47Z","id":1,"title":"wtf","updated_at":"2013-06-01T17:04:47Z","user_id":1}]}
+</code>
+<hr/>
 
 <h2>
 安全卡list
