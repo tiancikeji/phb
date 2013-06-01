@@ -2,11 +2,7 @@ class Api::ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    if params[:term]
-      @articles = Article.where("title like '%"+params[:term]+"%' ").page params[:page]
-    else
-      @articles = Article.page params[:page]
-    end
+    @articles = Article.where("user_id = "+params[:user_id])
     render :json => {:success=>true,:articles => @articles}
   end
 

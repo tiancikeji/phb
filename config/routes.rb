@@ -19,6 +19,8 @@ Phb::Application.routes.draw do
     resources :babycards
     resources :questions
     resources :feedbacks
+    match '/search' => 'search#index'
+    match '/search/keywords' => 'search#keywords'
   end
 
   mount Ckeditor::Engine => '/ckeditor'
