@@ -1,6 +1,10 @@
 class Api::SearchController < ApplicationController
   def index 
-    render :json => {:success => true}
+    articles = Article.where(:title => params[:term])
+    # locations = Location.tagged_with(params[:id])
+    categories = {}
+    categories.store(articles.first.category.name,articles)
+    render :json => {:success=>true,:categories => categories}
   end
 
   def keywords
