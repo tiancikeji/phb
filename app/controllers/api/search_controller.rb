@@ -3,7 +3,9 @@ class Api::SearchController < ApplicationController
     articles = Article.where("title like '%"+params[:term]+"%'")
     # locations = Location.tagged_with(params[:id])
     categories = {}
-    categories.store(articles.first.category.name,articles)
+    if articles.first and articles.first.category
+      categories.store(articles.first.category.name,articles)
+    end
     render :json => {:success=>true,:categories => categories}
   end
 
