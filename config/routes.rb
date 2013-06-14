@@ -1,4 +1,7 @@
 Phb::Application.routes.draw do
+  resources :likes
+
+
   resources :feedbacks
   resources :babycards
   resources :questions
@@ -12,6 +15,7 @@ Phb::Application.routes.draw do
     end
     resources  :users
     resources :tags
+    resources :likes
     resources :categories
     resources :comments
     resources :articles

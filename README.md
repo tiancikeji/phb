@@ -313,3 +313,30 @@ curl -XPOST -d'comment[article_id]=9&comment[content]=dddd&comment[title]=this i
 {"article_id":9,"content":"dddd","created_at":"2013-05-28T15:28:56Z","id":3,"title":"this is a title","updated_at":"2013-05-28T15:28:56Z","user_id":1}
 </code>
 <hr/>
+
+
+<h2>
+我的收藏
+</h2>
+<p>
+参数：
+</p>
+<code>
+curl -XGET -d'user_id=1' http://localhost:3001/api/likes
+{"success":true,"likes":[]}
+</code>
+<hr/>
+
+<h2>
+add收藏
+</h2>
+<p>
+参数：
+</p>
+<code>
+curl -XPOST -d'like[user_id]=1&like[article_id]=1' http://localhost:3001/api/likes
+
+{"success":true,"like":{"article_id":1,"created_at":"2013-06-14T14:01:03Z","id":1,"updated_at":"2013-06-14T14:01:03Z","user_id":1}}
+</code>
+<hr/>
+
