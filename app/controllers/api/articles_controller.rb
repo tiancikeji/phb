@@ -3,6 +3,8 @@ class Api::ArticlesController < ApplicationController
   # GET /articles.json
   def index
     @articles = Article.where("user_id = "+params[:user_id])
+    # @likes = Like.where("user_id = "+params[:user_id])
+    # like_ids = []
     render :json => {:success=>true,:articles => @articles}
   end
 

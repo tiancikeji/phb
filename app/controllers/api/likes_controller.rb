@@ -7,8 +7,9 @@ class Api::LikesController < ApplicationController
     @likes.each do |like|
       like_ids << like.article_id
     end
-    
-    render :json => {:success => true,:likes => Article.find_all_by_id(like_ids.uniq) } 
+    categories = {}
+    categories.store('likes',Article.find_all_by_id(like_ids.uniq))
+    render :json => {:success => true,:likes => categories } 
   end
 
   # GET /likes/1
