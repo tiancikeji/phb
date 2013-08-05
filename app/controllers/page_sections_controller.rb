@@ -56,7 +56,7 @@ class PageSectionsController < ApplicationController
   # PUT /page_sections/1.json
   def update
     @page_section = PageSection.find(params[:id])
-
+    @page_section.articles =  params[:article_ids].collect{ |id| id.to_s }.join(',') if params[:article_ids]
     respond_to do |format|
       if @page_section.update_attributes(params[:page_section])
         format.html { redirect_to @page_section, notice: 'Page section was successfully updated.' }

@@ -1,10 +1,6 @@
 Phb::Application.routes.draw do
   resources :page_sections
-
-
   resources :pages
-
-
   resources :books
   resources :likes
   resources :feedbacks
@@ -28,6 +24,7 @@ Phb::Application.routes.draw do
     resources :babycards
     resources :questions
     resources :feedbacks
+    resources :pages
     match '/search' => 'search#index'
     match '/search/keywords' => 'search#keywords'
   end

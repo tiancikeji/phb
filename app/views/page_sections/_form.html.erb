@@ -22,8 +22,8 @@
   <div class="field">
     <h4>choose article</h4>
     <% Article.all.each do |article| %>
-      <input type="checkbox" name="" id="" value="" /><%= article.title %><br/>
-      <% end %>
+      <%= check_box_tag 'article_ids[]',article.id %> <%= article.title %>
+    <% end %>
   </div>
   <div class="actions">
     <%= f.submit %>
