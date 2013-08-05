@@ -1,0 +1,32 @@
+
+<div class="widget_container">
+  <div class="well">
+<h1>Listing page_sections</h1>
+
+<table class="table">
+  <tr>
+    <th>Page</th>
+    <th>Name</th>
+    <th>Index</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @page_sections.each do |page_section| %>
+  <tr>
+    <td><%= page_section.page_id %></td>
+    <td><%= page_section.name %></td>
+    <td><%= page_section.index %></td>
+    <td><%= link_to 'Show', page_section %></td>
+    <td><%= link_to 'Edit', edit_page_section_path(page_section) %></td>
+    <td><%= link_to 'Destroy', page_section, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Page section', new_page_section_path %>
+</div>
+</div>

@@ -1,0 +1,35 @@
+
+<div class="widget_container">
+  <div class="well">
+<h1>Listing pages</h1>
+
+<table class="table">
+  <tr>
+    <th>Name</th>
+    <th>Index</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @pages.each do |page| %>
+  <tr>
+    <td><%= page.name %></td>
+    <td><%= page.index %></td>
+    <td>
+      <% page.pageSections.each do |section| %>
+        <a href="/page_sections/<%= section.id %>/edit"><%= section.name %></a>
+      <% end %>
+    </td>
+    <td><%= link_to 'Show', page %></td>
+    <td><%= link_to 'Edit', edit_page_path(page) %></td>
+    <td><%= link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Page', new_page_path %>
+</div>
+</div>

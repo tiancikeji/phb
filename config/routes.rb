@@ -1,10 +1,12 @@
 Phb::Application.routes.draw do
+  resources :page_sections
+
+
+  resources :pages
+
+
   resources :books
-
-
   resources :likes
-
-
   resources :feedbacks
   resources :babycards
   resources :questions
