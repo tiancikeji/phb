@@ -1,0 +1,35 @@
+
+<div class="widget_container">
+  <div class="well">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Author:</b>
+  <%= @book.author %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @book.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @book.description %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @book.url %>
+</p>
+
+<p>
+  <b>Cover:</b>
+  <img src="<%= @book.cover %>" alt="" />
+</p>
+
+
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Back', books_path %>
+</div>
+</div>

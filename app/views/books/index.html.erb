@@ -1,0 +1,36 @@
+<div class="widget_container">
+  <div class="well">
+    <h1>Listing books</h1>
+
+    <table class="table">
+      <tr>
+        <th>Cover</th> 
+        <th>Author</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Url</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+
+    <% @books.each do |book| %>
+      <tr>
+        <td><img src="<%= book.cover %>" alt="" /></td>
+        <td><%= book.author %></td>
+        <td><%= book.name %></td>
+        <td><%= book.description %></td>
+        <td><%= book.url %></td>
+        <td><%= link_to 'Show', book %></td>
+        <td><%= link_to 'Edit', edit_book_path(book) %></td>
+        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+    </table>
+
+    <br />
+
+    <%= link_to 'New Book', new_book_path %>
+
+  </div>
+</div>
